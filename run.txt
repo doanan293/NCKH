@@ -2,12 +2,21 @@
 #Format: python train.py <filedata để train> <file data năm 2022> --strategy <chiến thuật> --model-name <Tên mô hình muốn đặt>
 #Dùng để tạo ra mô hình
 # Ví dụ;
-python train.py data/VIC.csv data/VIC2023.csv --strategy t-dqn --model-name model_vic_tdqn
-python train.py data/VIC.csv data/VIC2023.csv --strategy dqn --model-name model_vic_dqn
-python train.py data/VIC.csv data/VIC2023.csv --strategy double-dqn --model-name model_vic_double_dqn
+------------------HPG---------------------------
+python train.py data/VIC.csv data/VIC2023.csv --strategy t-dqn --model-name VIC_tdqn
+python train.py data/VIC.csv data/VIC2023.csv --strategy dqn --model-name VIC_dqn
+python train.py data/VIC.csv data/VIC2023.csv --strategy double-dqn --model-name VIC_double_dqn
+----------------FPT----------------------------
+python train.py data/FPT.csv data/FPT2023.csv --strategy t-dqn --model-name FPT_tdqn
+python train.py data/FPT.csv data/FPT2023.csv --strategy dqn --model-name FPT_dqn
+python train.py data/FPT.csv data/FPT2023.csv --strategy double-dqn --model-name FPT_double_dqn
 #---------------------Evaluate---------------------------
 #Sử dụng mô hình đã tạo để áp vào data
 #Format: python eval.py <file data năm 2023 đến nay> --model-name <Tên mô hình> --debug
-python eval.py data/VIC2024.csv --model-name model_vic_tdqn_50 --debug
-python eval.py data/VIC2024.csv --model-name model_vic_dqn_50 --debug
-python eval.py data/VIC2024.csv --model-name model_vic_double_dqn_50 --debug
+python eval.py data/VIC2024.csv --model-name VIC_tdqn_50 --debug
+python eval.py data/VIC2024.csv --model-name VIC_dqn_50 --debug
+python eval.py data/VIC2024.csv --model-name VIC_double_dqn_50 --debug
+-------------------------------
+python eval.py data/FPT2024.csv --model-name FPT_tdqn_50 --debug
+python eval.py data/FPT2024.csv --model-name FPT_dqn_50 --debug
+python eval.py data/FPT2024.csv --model-name FPT_double_dqn_50 --debug
